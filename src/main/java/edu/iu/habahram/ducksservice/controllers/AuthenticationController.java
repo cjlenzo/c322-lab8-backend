@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/signup")
 public class AuthenticationController {
     CustomerRepository customerRepository;
 
@@ -14,7 +13,7 @@ public class AuthenticationController {
         this.customerRepository = customerRepository;
     }
 
-    @PostMapping
+    @PostMapping("/signup")
     public void signup(@RequestBody Customer customer) {
         try {
             customerRepository.save(customer);

@@ -1,2 +1,2 @@
 john,password,john@email.com
-,,
+cjlenzo,password1,cjlenzo@iu.edu

@@ -45,13 +45,13 @@ public class CustomerRepository {
                     "Please choose another one.");
         }
         Path path = Paths.get(DATABASE_NAME);
-        String data = customer.username() + ","
-                + customer.password()// (THIS IS ONLY TEMPORARY!)
+        String data = customer.username().trim() + ","
+                + customer.password().trim()// (THIS IS ONLY TEMPORARY!)
                 // we should never store the plain password.
                 // In the next step in this lab,
                 // we will encode the password
                 //before saving it to the file
-                + "," + customer.email();
+                + "," + customer.email().trim();
         appendToFile(path, data + NEW_LINE);
     }
 
